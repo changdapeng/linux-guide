@@ -8,7 +8,7 @@ ngrep命令的下载地址：http://ngrep.sourceforge.net/，libpcap下载地址
 在CentOS 6.5 系统下 我们直接使用yum进行安装：
 
 
-    $ sudo yum install ngrep
+    # yum install ngrep
 
 
 
@@ -56,6 +56,19 @@ ngrep命令的下载地址：http://ngrep.sourceforge.net/，libpcap下载地址
 
 
 
-## 五、常用实例：
+## 五、常用范例：
+
+#### 1、监听本地eth0网卡 [-d eth0]，监听9085端口 [port 5068]：
+-W byline 用来解析包中的换行符，否则包里的所有数据都是连续的
 
 
+    # ngrep -d eth0 port 5068 -W byline
+
+
+![ngrep -d eth0 port 80 -W byline](image/01.png)
+
+
+#### 2、监听指定ip发来的数据包 [host 10.0.19.96 or host 10.0.19.104]:
+
+
+    # ngrep -d eth0  host 10.0.19.96 or host 10.0.19.104 and port 5068 -W byline
