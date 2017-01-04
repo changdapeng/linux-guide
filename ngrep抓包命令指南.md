@@ -68,7 +68,8 @@ ngrep命令的下载地址：http://ngrep.sourceforge.net/，libpcap下载地址
 ![ngrep -d eth0 port 80 -W byline](image/01.png)
 
 
-#### 2、监听指定ip发来的数据包 [host 10.0.19.96 or host 10.0.19.104]:
+#### 2、监听指定ip发来的数据包 [host 10.0.19.96 or host 10.0.19.104] 且本地端口为5068 [port 5068]:
 
 
     # ngrep -d eth0  host 10.0.19.96 or host 10.0.19.104 and port 5068 -W byline
+
